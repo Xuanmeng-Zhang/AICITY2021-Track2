@@ -1,0 +1,6 @@
+python -u train_pid_color_type_all_cos_decay.py --model_arch 'HRNet_W48_C' --pretrain 'pretrained/HRNet_W48_C_ssld_pretrained' --batch_size 32 --big_height 384 --big_width 384 --target_height 384 --target_width 384 --learning_rate 0.01 --warm_up_iter 5000 --max_iter 45000 --lr_steps 25000 35000 40000
+python -u train_pid_color_type_all_cos_decay.py --model_arch 'HRNet_W48_C' --pretrain 'pretrained/HRNet_W48_C_ssld_pretrained' --batch_size 32 --big_height 400 --big_width 400 --target_height 384 --target_width 384 --learning_rate 0.01 --warm_up_iter 5000 --max_iter 45000 --lr_steps 25000 35000 40000
+python -u train_pid_color_type_all_cos_decay.py --model_arch 'HRNet_W48_C' --pretrain 'pretrained/HRNet_W48_C_ssld_pretrained' --batch_size 32 --big_height 416 --big_width 416 --target_height 416 --target_width 416 --learning_rate 0.01 --warm_up_iter 5000 --max_iter 45000 --lr_steps 25000 35000 40000
+python -u train_pid_color_type_all_cos_decay.py --model_arch 'HRNet_W48_C' --pretrain 'pretrained/HRNet_W48_C_ssld_pretrained' --batch_size 32 --big_height 432 --big_width 432 --target_height 416 --target_width 416 --learning_rate 0.01 --warm_up_iter 5000 --max_iter 45000 --lr_steps 25000 35000 40000
+
+python -u test.py --model_arch --weights model_final --big_height 432 --big_width 432 --target_height 416 --target_width 416

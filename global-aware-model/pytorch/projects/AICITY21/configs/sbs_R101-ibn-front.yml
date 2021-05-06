@@ -1,0 +1,42 @@
+_BASE_: ../../../configs/Base-SBS.yml
+
+INPUT:
+  SIZE_TRAIN: [400, 400]
+  SIZE_TEST: [400, 400]
+  DO_AUTOAUG: True
+  AUTOAUG_PROB: 0.5
+  DO_RANDCROP: False
+  DO_RESIZEAUG: False
+
+MODEL:
+  BACKBONE:
+    DEPTH: 101x
+    WITH_IBN: True
+    #NAME: build_resnest_backbone
+    NORM: syncBN
+
+  HEADS:
+    NORM: syncBN
+
+DATALOADER:
+  NUM_INSTANCE: 8
+
+SOLVER:
+  DELAY_EPOCHS: 0
+  SCHED: MultiStepLR
+  STEPS: [12, 16, 20, 24]
+  GAMMA: 0.1
+  WARMUP_ITERS: 4000
+  #FREEZE_ITERS: 0
+
+  MAX_EPOCH: 30
+  IMS_PER_BATCH: 64
+  CHECKPOINT_PERIOD: 1
+
+  
+DATASETS:
+  NAMES: ('AICity21Front',)
+  TESTS: ("AICity21Front",)
+
+OUTPUT_DIR: logs/aicity21-part/sbs_R101-ibn-front/
+

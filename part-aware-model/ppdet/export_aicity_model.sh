@@ -1,0 +1,1 @@
+python tools/export_model.py -c configs/yolov3_r34.yml --output_dir=./inference_aicity_model_resize_twice -o weights=./output_aicity_resize_twice/yolov3_r34/best_model TestReader.inputs_def.image_shape=[3,224,224]
