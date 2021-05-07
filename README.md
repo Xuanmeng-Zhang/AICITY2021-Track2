@@ -51,7 +51,6 @@ Follow [post-processing](post-processing/run.sh) to get the final result.
 AICITY2020 Challange Track2 Leaderboard
 |TeamName|mAP|Link|
 |--------|----|-------|
-|DMT|0.7445|[code](https://github.com/michuanhaohao/AICITY2021_Track2_DMT)|
 |**NewGeneration(Ours)**|0.7151|[code](https://github.com/Xuanmeng-Zhang/AICITY2021-Track2)|
 |CyberHu|0.6550|code|
 
