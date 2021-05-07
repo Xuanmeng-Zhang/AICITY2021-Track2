@@ -4,6 +4,8 @@ In this repo, we include the runner-up solution of AICITY Challenge Track2 (Vehi
 
 The code is modified from [fast-reid](https://github.com/JDAI-CV/fast-reid), [PaddleReid]( https://github.com/PaddlePaddle/Research/tree/master/CV/PaddleReid )  and [AICIty-reID-2020]( https://github.com/layumi/AICIty-reID-2020 ).
 
+<img src="/Users/v_zhangxuanmeng/Library/Application Support/typora-user-images/image-20210507162514827.png" alt="image-20210507162514827" style="zoom:60%;" />
+
 ### Overview
 
 The repo contains the training code, testing code and additional annotations on the training sets.
