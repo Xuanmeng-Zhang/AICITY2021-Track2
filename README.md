@@ -4,6 +4,8 @@ In this repo, we include the runner-up solution of AICITY Challenge Track2 (Vehi
 
 The code is modified from [fast-reid](https://github.com/JDAI-CV/fast-reid), [PaddleReid]( https://github.com/PaddlePaddle/Research/tree/master/CV/PaddleReid )  and [AICIty-reID-2020]( https://github.com/layumi/AICIty-reID-2020 ).
 
+[[Download PDF]](https://zdzheng.xyz/files/CVPRW-2021-VehicleReid.pdf)
+
 <img src="paper.png"  style="zoom:40%;" />
 
 ### Overview
