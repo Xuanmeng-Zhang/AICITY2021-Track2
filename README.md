@@ -2,13 +2,16 @@
 
 In this repo, we include the runner-up solution of AICITY Challenge Track2 (Vehicle Re-Identification)  at CVPR 2021 Workshop.
 
-The code is modified from [fast-reid](https://github.com/JDAI-CV/fast-reid), [PaddleReid]( https://github.com/PaddlePaddle/Research/tree/master/CV/PaddleReid )  and [AICIty-reID-2020]( https://github.com/layumi/AICIty-reID-2020 ).
+<!-- > This repository is an official PyTorch implementation of paper:<br> -->
+> [Robust Vehicle Re-identification via Rigid Structure Prior](https://openaccess.thecvf.com/content/CVPR2021W/AICity/papers/Jiang_Robust_Vehicle_Re-Identification_via_Rigid_Structure_Prior_CVPRW_2021_paper.pdf)<br>
+> Minyue Jiang\*, Xuanmeng Zhang\*, Yue Yu, Zechen Bai, Zhedong Zheng,Zhigang Wang, Jian Wang, Xiao Tan, Hao Sun, Errui Ding, Yi Yang <br>
+> \* denotes equal contribution.
 
-[[Download PDF]](https://zdzheng.xyz/files/CVPRW-2021-VehicleReid.pdf)
+<!-- [[Download PDF]](https://openaccess.thecvf.com/content/CVPR2021W/AICity/papers/Jiang_Robust_Vehicle_Re-Identification_via_Rigid_Structure_Prior_CVPRW_2021_paper.pdf) -->
 
-<img src="paper.png"  style="zoom:40%;" />
+<!-- <img src="paper.png"  style="zoom:40%;" /> -->
 
-### Overview
+## Overview
 
 The repo contains the training code, testing code and additional annotations on the training sets.
 
@@ -19,6 +22,7 @@ The repo contains the training code, testing code and additional annotations on 
 │   ├── part-aware-model/
 │   ├── post-processing/
 ```
+## Getting Started
 
 ### Prerequisite
 
@@ -30,6 +34,7 @@ The repo contains the training code, testing code and additional annotations on 
    - [Res2Net-200](https://paddle-imagenet-models-name.bj.bcebos.com/Res2Net200_vd_26w_4s_ssld_pretrained.tar)
 2. Download the  AICity2021 dataset.
 3. Prepare the dataset. See [prepare data](https://github.com/PaddlePaddle/Research/tree/master/CV/PaddleReid/process_aicity_data) .
+
 
 ### Annotations
 
@@ -43,7 +48,7 @@ We select images from the training set of CityFlowV2 to annotate the defined bou
 
 ### Testing
 
-1. Follow [reid modelt](global-aware-model/TEST.md)  to extract the reid features.
+1. Follow [reid model](global-aware-model/TEST.md)  to extract the reid features.
 2. Follow [detection model](part-aware-model/ppdet/README.md)  to inference on query and test datasets.
 3. Follow [direction model](part-aware-model/vreid_direction/README.md) to inference on query and test datasets.
 
@@ -53,19 +58,27 @@ Follow [post-processing](post-processing/run.sh) to get the final result.
 
 ## Performance
 AICITY2020 Challange Track2 Leaderboard
-|TeamName|mAP|Link|
-|--------|----|-------|
-|**NewGeneration(Ours)**|0.7151|[code](https://github.com/Xuanmeng-Zhang/AICITY2021-Track2)|
+||TeamName|mAP|Link|
+|---|--------|----|-------|
+|1|Alibaba|0.7445|[code](https://github.com/michuanhaohao/AICITY2021_Track2_DMT)|
+|2|**Baidu UTS**|0.7151|[code](https://github.com/Xuanmeng-Zhang/AICITY2021-Track2)|
+|3|CyberHu|0.6550|code|
 
+## Acknowledgment
 
+Our implementation is partly based on the following codebases. We gratefully thank the authors for their wonderful works: 
+[fast-reid](https://github.com/JDAI-CV/fast-reid),
+[PaddleReid]( https://github.com/PaddlePaddle/Research/tree/master/CV/PaddleReid ), and [AICIty-reID-2020]( https://github.com/layumi/AICIty-reID-2020 ).
 ## Citation
 
 If you find our work useful in your research, please consider citing:
-```
+```bibtex
 @inproceedings{jiang2021robust,
- title={Robust Vehicle Re-identification via Rigid Structure Prior},
- author={Jiang, Minyue and Zhang, Xuanmeng and Yu, Yue and Bai, Zechen and Zheng, Zhedong and Wang, Zhigang and Wang, Jian and Tan, Xiao and Sun, Hao and Ding, Errui and Yang, Yi},
- booktitle={Proc. CVPR Workshops},
- year={2021}
+  author    = {Jiang, Minyue and Zhang, Xuanmeng and Yu, Yue and Bai, Zechen and Zheng, Zhedong and Wang, Zhigang and Wang, Jian and Tan, Xiao and Sun, Hao and Ding, Errui and Yang, Yi},
+    title     = {Robust Vehicle Re-Identification via Rigid Structure Prior},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+    month     = {June},
+    year      = {2021},
+    pages     = {4026-4033}
 }
 ```
